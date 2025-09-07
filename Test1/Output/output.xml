@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-09-07T17:49:11.780571" rpa="false" schemaversion="5">
+<suite id="s1" name="Saucedemo" source="C:\development\robot-framework-tests\Test1\Tests\saucedemo.robot">
+<test id="s1-t1" name="Valid Login" line="12">
+<kw name="Load the browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-07T17:49:12.249073" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-07T17:49:12.248733" elapsed="1.781547"/>
+</kw>
+<status status="PASS" start="2025-09-07T17:49:12.247615" elapsed="1.783006"/>
+</kw>
+<kw name="Open the given URL">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T17:49:14.032409" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T17:49:14.032060" elapsed="0.497873"/>
+</kw>
+<status status="PASS" start="2025-09-07T17:49:14.031383" elapsed="0.498751"/>
+</kw>
+<kw name="Enter the valid username field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T17:49:14.531846" level="INFO">Typing text 'standard_user' into text field 'xpath=//input[contains(@name,'user-name')]'.</msg>
+<arg>xpath=//input[contains(@name,'user-name')]</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T17:49:14.531167" elapsed="0.171661"/>
+</kw>
+<status status="PASS" start="2025-09-07T17:49:14.530606" elapsed="0.172507"/>
+</kw>
+<kw name="Enter the valid Password field">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-09-07T17:49:14.705075" level="INFO">Typing password into text field 'xpath=//input[contains(@name,'password')]'.</msg>
+<msg time="2025-09-07T17:49:14.766172" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//input[contains(@name,'password')]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T17:49:14.704571" elapsed="0.142902"/>
+</kw>
+<status status="PASS" start="2025-09-07T17:49:14.703992" elapsed="0.143727"/>
+</kw>
+<kw name="Click on the login button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T17:49:14.849023" level="INFO">Clicking button 'xpath=//input[contains(@name,'login-button')]'.</msg>
+<arg>xpath=//input[contains(@name,'login-button')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T17:49:14.848702" elapsed="0.150310"/>
+</kw>
+<status status="PASS" start="2025-09-07T17:49:14.848172" elapsed="0.151101"/>
+</kw>
+<kw name="Validate the logged in Page">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T17:49:15.062086" level="INFO">${loginpass} = Products</msg>
+<var>${loginpass}</var>
+<arg>//span[@class='title']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T17:49:15.000195" elapsed="0.061983"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${loginpass}</arg>
+<arg>Products</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-09-07T17:49:15.062489" elapsed="0.000352"/>
+</kw>
+<status status="PASS" start="2025-09-07T17:49:14.999740" elapsed="0.063244"/>
+</kw>
+<status status="PASS" start="2025-09-07T17:49:12.245924" elapsed="2.817429"/>
+</test>
+<doc>This is for practice SauceLab Login Test</doc>
+<status status="PASS" start="2025-09-07T17:49:11.782795" elapsed="3.281511"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Saucedemo" id="s1" pass="1" fail="0" skip="0">Saucedemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
