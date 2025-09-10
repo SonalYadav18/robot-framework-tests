@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-09-10T10:36:35.702291" rpa="false" schemaversion="5">
+<suite id="s1" name="Saucedemo" source="C:\development\robot-framework-tests\Test1\Tests\saucedemo.robot">
+<test id="s1-t1" name="Products addition to cart" line="26">
+<kw name="Begin Web Test" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-10T10:36:36.170012" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-10T10:36:36.169687" elapsed="1.795373"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:36.168774" elapsed="1.796563"/>
+</kw>
+<kw name="Add Products to cart" owner="sauceapp">
+<kw name="Open the given URL" owner="Login">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-10T10:36:37.969247" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-10T10:36:37.968204" elapsed="0.512556"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:37.967581" elapsed="0.513336"/>
+</kw>
+<kw name="Enter the valid username field" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-10T10:36:38.481997" level="INFO">Typing text 'standard_user' into text field 'xpath=//input[contains(@name,'user-name')]'.</msg>
+<arg>xpath=//input[contains(@name,'user-name')]</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T10:36:38.481442" elapsed="0.125767"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:38.481143" elapsed="0.126258"/>
+</kw>
+<kw name="Enter the valid Password field" owner="Login">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-09-10T10:36:38.608404" level="INFO">Typing password into text field 'xpath=//input[contains(@name,'password')]'.</msg>
+<msg time="2025-09-10T10:36:38.655454" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//input[contains(@name,'password')]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T10:36:38.608073" elapsed="0.112205"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:38.607686" elapsed="0.112739"/>
+</kw>
+<kw name="Click on the login button" owner="Login">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T10:36:38.721099" level="INFO">Clicking button 'xpath=//input[contains(@name,'login-button')]'.</msg>
+<arg>xpath=//input[contains(@name,'login-button')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T10:36:38.720915" elapsed="0.123477"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:38.720640" elapsed="0.123891"/>
+</kw>
+<kw name="Add Sauce Labs Backpack Product to cart" owner="Products">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T10:36:38.845340" level="INFO">Clicking button 'xpath=//div[text()='Sauce Labs Backpack']//ancestor::div[@class='inventory_item_description']//button'.</msg>
+<arg>xpath=//div[text()='Sauce Labs Backpack']//ancestor::div[@class='inventory_item_description']//button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T10:36:38.845079" elapsed="0.095997"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:38.844749" elapsed="0.096502"/>
+</kw>
+<kw name="Filter price low to high" owner="Products">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-09-10T10:36:38.942324" level="INFO">Selecting options from selection list 'xpath=//select[@class='product_sort_container']' by value lohi.</msg>
+<arg>xpath=//select[@class='product_sort_container']</arg>
+<arg>lohi</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-09-10T10:36:38.942015" elapsed="0.082761"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:38.941525" elapsed="0.083452"/>
+</kw>
+<kw name="Add to cart first product after filter" owner="Products">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T10:36:39.025928" level="INFO">Clicking button 'xpath=//div[@class='inventory_list']//div[1]//button'.</msg>
+<arg>xpath=//div[@class='inventory_list']//div[1]//button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T10:36:39.025689" elapsed="0.057282"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:39.025278" elapsed="0.057817"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-10T10:36:44.084400" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-10T10:36:39.083250" elapsed="5.001377"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:37.966399" elapsed="6.118408"/>
+</kw>
+<kw name="End Web Test" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-10T10:36:44.086921" elapsed="2.321310"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:44.086061" elapsed="2.322483"/>
+</kw>
+<status status="PASS" start="2025-09-10T10:36:36.167678" elapsed="10.241207"/>
+</test>
+<doc>This is for practice SauceLab Login Test</doc>
+<status status="PASS" start="2025-09-10T10:36:35.704462" elapsed="10.705685"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Saucedemo" id="s1" pass="1" fail="0" skip="0">Saucedemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
